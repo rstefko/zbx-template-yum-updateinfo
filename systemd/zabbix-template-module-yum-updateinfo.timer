@@ -4,7 +4,8 @@ Requires=zabbix-template-module-yum-updateinfo.service
 
 [Timer]
 Unit=zabbix-template-module-yum-updateinfo.service
-OnCalendar=*-*-* *:00:00
+OnBootSec=15min
+OnUnitActiveSec=1w
 
 [Install]
 WantedBy=timers.target
